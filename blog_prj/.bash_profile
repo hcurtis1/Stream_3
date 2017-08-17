@@ -1,0 +1,1 @@
+alias pymang="python manage.py"
