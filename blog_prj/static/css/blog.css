@@ -120,3 +120,8 @@ a, a:hover {
     background-color: transparent; }
     .navbar .navbar-inner .navbar-header #subNavBrand {
       font-size: 10px; }
+
+#blgimg {
+    max-width: 60vw;
+    max-height: 80vh;
+}
