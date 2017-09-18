@@ -3,8 +3,9 @@
 {% block content %}
     <div class="row">
         <div class="col-md-2 col-sm-3 text-center">
-            <a class="story-img" href="#">
-                <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+            <a class="story-img" href="/blog">
+                <img src="/media/profile_pic/prof_pic.jpg"
+                     style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
             </a>
         </div>
         <div class="col-md-10 col-sm-9">
@@ -12,7 +13,7 @@
             <div class="row">
                 <div class="col-xs-9">
                     {% if post.image %}
-                        <a id="blgimg"><img src="/media/{{ post.image }}"></a>
+                        <a><img id="blgimg" src="/media/{{ post.image }}"></a>
                     {% endif %}
                     <p>{{ post.content }}</p>
                     <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button></p>

@@ -121,7 +121,8 @@ a, a:hover {
     .navbar .navbar-inner .navbar-header #subNavBrand {
       font-size: 10px; }
 
-#blgimg {
+#blgimg img {
     max-width: 60vw;
     max-height: 80vh;
+    margin-bottom: 20px;
 }
