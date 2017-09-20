@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d18e8e51-81af-4d16-9653-398bd1019dd0" name="Default" comment="Work space modifications">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth_demo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../auth_demo/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/flatpages/default.html" afterPath="$PROJECT_DIR$/templates/flatpages/default.html" />
     </list>
@@ -434,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505900291524</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Work space modifications">
+      <created>1505900316494</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1505900316494</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -468,12 +474,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Work space modifications" />
     <MESSAGE value="Index modified to extend base.html" />
     <MESSAGE value="Modifications for Django Flatpages" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Database update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database update" />
+    <MESSAGE value="Work space modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work space modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
