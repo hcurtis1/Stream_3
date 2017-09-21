@@ -133,3 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Stripe environment variables
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_XnU1Il0m19MlasIUndJYA5hu')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_RgO2mEkpL9NwCF6wBuqxVuM6')
