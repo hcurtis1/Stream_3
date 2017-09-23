@@ -134,6 +134,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_DIRS = (
+    os.path.join(BASE_DIR, )
+)
+
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_XnU1Il0m19MlasIUndJYA5hu')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_RgO2mEkpL9NwCF6wBuqxVuM6')
