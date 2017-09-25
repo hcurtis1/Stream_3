@@ -1,6 +1,8 @@
 $(function() {
+
   $("#register-form").submit(function() {
       var form = this;
+
       var card = {
         number:   $("#id_credit_card_number").val(),
         expMonth: $("#id_expiry_month").val(),
@@ -9,7 +11,8 @@ $(function() {
       };
 
       $("#validate_card_btn").attr("disabled", true);
-       Stripe.createToken(card, function(status, response) {
+
+      Stripe.createToken(card, function(status, response) {
         if (status === 200) {
           console.log(status, response);
           $("#credit-card-errors").hide();
@@ -20,8 +23,11 @@ $(function() {
           $("#stripe-error-message").text(response.error.message);
           $("#credit-card-errors").show();
           $("#validate_card_btn").attr("disabled", false);
+
         }
       });
+
       return false;
   });
+
 });
