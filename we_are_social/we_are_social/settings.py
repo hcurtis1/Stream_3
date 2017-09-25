@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts.apps.AccountsConfig',
+    'accounts',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'bootstrapform',
     'hello',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +138,10 @@ STATIC_URL = '/static/'
 
 STATIC_DIRS = (
     os.path.join(BASE_DIR, )
+)
+
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, "static"),
 )
 
 # Stripe environment variables
