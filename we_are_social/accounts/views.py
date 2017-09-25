@@ -1,15 +1,13 @@
-# -*- coding: utf-8 -*-
 from django.contrib import messages, auth
+from django.contrib.auth.decorators import login_required
+from accounts.forms import UserRegistrationForm, UserLoginForm
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
-from accounts.forms import UserRegistrationForm, UserLoginForm
-from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from hello.views import get_index
 import datetime
 import stripe
-
-# Create your views here.
 
 stripe.api_key = settings.STRIPE_SECRET
 
@@ -21,7 +19,7 @@ def register(request):
             try:
                 customer = stripe.Charge.create(
                     amount=999,
-                    currency="USD",
+                    currency="GBP",
                     description=form.cleaned_data['email'],
                     card=form.cleaned_data['stripe_id'],
                 )
@@ -45,6 +43,8 @@ def register(request):
 
     args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE}
     args.update(csrf(request))
+
+    return render(request, 'register.html', args)
 
 @login_required(login_url='/login/')
 def profile(request):
@@ -75,4 +75,4 @@ def login(request):
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse(get_index))
