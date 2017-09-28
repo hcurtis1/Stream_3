@@ -39,12 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'bootstrapform',
     'hello',
+    'accounts',
+    'products',
+    'paypal_store',
+    'bootstrapform',
     'bootstrap3',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -112,9 +115,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'accounts.User'
 
-AUTHENTICATION_BACKENDS = (
-    'accounts.backends.EmailAuth',
-)
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
+                           'accounts.backends.EmailAuth',)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -146,3 +148,8 @@ STATICFILES_DIRS = (
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_XnU1Il0m19MlasIUndJYA5hu')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_RgO2mEkpL9NwCF6wBuqxVuM6')
+
+# PayPal settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'hcuk106@outlook.com'
