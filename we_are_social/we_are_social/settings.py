@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'hello',
     'accounts',
     'products',
+    'magazines',
     'paypal_store',
     'bootstrapform',
     'bootstrap3',
